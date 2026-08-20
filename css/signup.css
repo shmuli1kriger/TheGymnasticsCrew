@@ -1,0 +1,192 @@
+/* Custom Styles for Sign Up Page */
+
+main {
+    background: white;
+    max-width: 850px;
+    margin: 3rem auto;
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    box-shadow: var(--card-shadow);
+    border: 4px solid #f3e8ff;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    font-size: 1.05rem;
+    color: #b1006a; /* Fun but alerting deep pink */
+    font-weight: 600;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+    padding: 0.8rem 1.2rem;
+    background-color: rgba(255, 112, 166, 0.08);
+    border-radius: 12px;
+    border: 1px dashed rgba(255, 112, 166, 0.5);
+}
+
+.info {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.05) 0%, rgba(123, 44, 191, 0.05) 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 2px solid rgba(123, 44, 191, 0.08);
+    margin: 1.5rem auto 2.5rem auto;
+    max-width: 750px;
+}
+
+.info p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #4a3e65;
+    margin: 0.6rem 0;
+}
+
+.subNote {
+    font-size: 0.9em !important;
+    color: #8b7fa4;
+    font-style: italic;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    max-width: 650px;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+form .mb-3 {
+    margin-bottom: 1.5rem !important;
+}
+
+form label {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #5a4b76;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    padding-left: 0.3rem;
+}
+
+/* Make form inputs super sleek, cozy, and playful */
+.form-input {    
+    background-color: #fcfaff !important;
+    border: 2px solid #e2d9f3 !important;
+    border-radius: 12px !important;
+    padding: 0.8rem 1.2rem !important;
+    font-family: 'Quicksand', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    color: var(--text-dark) !important;
+    transition: all 0.3s ease !important;
+    box-shadow: inset 0 2px 4px rgba(123, 44, 191, 0.02) !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.form-input:focus {
+    outline: none !important;
+    border-color: var(--primary-color) !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 4px rgba(123, 44, 191, 0.12) !important;
+}
+
+.form-input::placeholder {
+    color: #b0a4cc;
+    opacity: 0.8;
+}
+
+/* Style selected dropdown correctly */
+select.form-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%237b2cbf' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 1.2rem center !important;
+    background-size: 16px 12px !important;
+    padding-right: 3rem !important;
+}
+
+/* Submit Section with bubbly button style */
+.submit {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.submitbut {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #ff4785 100%) !important;
+    color: white !important;
+    font-family: 'Fredoka', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    padding: 0.8rem 2.5rem !important;
+    border: none !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 15px rgba(255, 112, 166, 0.4) !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    display: inline-block;
+}
+
+.submitbut:hover {
+    transform: scale(1.05) translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(255, 112, 166, 0.6) !important;
+}
+
+.submitbut:active {
+    transform: scale(0.98) translateY(-1px) !important;
+}
+
+@media (max-width: 768px) {
+    main {
+        max-width: 95%;
+        margin: 1.5rem auto;
+        padding: 2rem 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .info {
+        padding: 1.2rem;
+    }
+    
+    .info p {
+        font-size: 1rem;
+    }
+    
+    form {
+        padding: 0 0.5rem;
+    }
+}

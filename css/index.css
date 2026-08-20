@@ -1,0 +1,311 @@
+/* Banner Carousel Styling */
+#banner {
+    background: linear-gradient(135deg, #7b2cbf 0%, #9d4edd 50%, #ff70a6 100%);
+    text-align: center;
+    font-size: 1.35em;
+    color: whitesmoke;
+    letter-spacing: .05em;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    padding: 4rem 2rem;
+    border-radius: 24px;
+    margin: 2rem auto;
+    max-width: 95%;
+    box-shadow: var(--card-shadow);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+#banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    pointer-events: none;
+    animation: rotateBg 20s linear infinite;
+}
+
+@keyframes rotateBg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.carousel-item {
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.carousel-item p {
+    margin: 0;
+    padding: 1.5rem 2rem;
+    line-height: 1.4;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    text-align: center;
+}
+#signupLink, 
+.carousel-text-target {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  border: 2px solid transparent; /* Match the button's 2px border thickness secretly */
+  font-weight: 700;
+}
+#signupLink {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(255, 112, 166, 0.4);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+}
+
+#signupLink:hover {
+    color: #ffffff;
+    background-color: var(--primary-color);
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.4);
+}
+
+/* Base Article Design */
+article {
+    text-align: center;
+    padding: 5rem 2rem;
+    margin: 3rem auto;
+    max-width: 90%;
+    border-radius: 24px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+article h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+article p {
+    line-height: 1.8;
+    text-align: center;
+    font-size: 1.1rem;        
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    margin: 1.5rem auto 0 auto;
+    max-width: 800px;
+    color: #4a3e65;
+}
+
+/* Intro Section */
+.intro {
+    background: white;
+    border: 4px solid #f3e8ff;
+}
+
+.intro #gymnastics-logo {
+    width: 220px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    animation: floatLogo 4s ease-in-out infinite;
+}
+
+
+.intro h1 {
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.intro h2 {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* About Us Section */
+.aboutUs {
+    background: linear-gradient(135deg, rgba(255, 112, 166, 0.1) 0%, rgba(123, 44, 191, 0.1) 100%);
+    border: 4px solid rgba(123, 44, 191, 0.15);
+}
+
+.aboutUs h1 {
+    color: var(--primary-color);
+}
+
+/* Classes Section */
+.classes {
+    background: white;
+    border: 4px solid #e0f2fe;
+}
+
+.classes h1 {
+    color: #0284c7; /* Playful blue */
+}
+
+.classes p {
+    color: #334155;
+}
+
+.signupLink {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #ff4785 100%);
+    color: white !important;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 15px rgba(255, 112, 166, 0.4);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+}
+
+.signupLink a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.signupLink:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 112, 166, 0.6);
+}
+
+/* Performance Section */
+.performance {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.15) 0%, rgba(255, 112, 166, 0.15) 100%);
+    border: 4px solid rgba(76, 201, 240, 0.2);
+}
+
+.performance h1 {
+    color: #0d9488; /* Cute teal */
+}
+
+/* Contact Section with list form layout styling */
+.contact {
+    background: white;
+    border: 4px solid #fae8ff;
+}
+
+.contact h1 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.contact form {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact li {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+}
+
+.contact label {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #5a4b76;
+    padding-left: 0.5rem;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: #fcfaff;
+    border: 2px solid #e2d9f3;
+    border-radius: 12px;
+    box-shadow: inset 0 2px 4px rgba(123, 44, 191, 0.02);
+    transition: all 0.3s ease;
+}
+
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus,
+.contact textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(123, 44, 191, 0.12);
+}
+
+.contact #submit {
+    align-self: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #9d4edd 100%);
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    padding: 0.8rem 3rem;
+    border: none;
+    border-radius: 50px;
+    margin: 1.5rem auto 0 auto;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(123, 44, 191, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: block;
+}
+
+.contact #submit:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.4);
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 768px) {
+    article {
+        max-width: 95%;
+        padding: 3rem 1.2rem;
+    }
+    
+    article h1 {
+        font-size: 2rem;
+    }
+    
+    .intro h1 {
+        font-size: 2.2rem;
+    }
+    
+    .intro h2 {
+        font-size: 1.6rem;
+    }
+    
+    article p {
+        font-size: 1rem;
+        margin: 1rem auto;
+    }
+    
+    #banner {
+        font-size: 1.1em;
+        padding: 2.5rem 1rem;
+    }
+}
