@@ -31,13 +31,13 @@ main {
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 3px solid rgba(123, 44, 191, 0.1);
   box-shadow: 0 4px 20px rgba(123, 44, 191, 0.05);
-  padding: 0.8rem 1.5rem !important;
+  padding: 1.1rem 2rem !important;
 }
 
 .navbar-brand {
   font-family: 'Fredoka', sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   color: var(--primary-color) !important;
   display: flex;
   align-items: center;
@@ -47,7 +47,7 @@ main {
 .navbar-brand img {
   filter: drop-shadow(0 2px 5px rgba(123, 44, 191, 0.2));
   transition: transform 0.5s ease;
-  height: 32px !important;
+  height: 2.8rem !important;
   width: auto !important;
 }
 
@@ -58,10 +58,10 @@ main {
 .nav-link {
   font-family: 'Fredoka', sans-serif;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   color: #5a4b76 !important;
-  padding: 0.5rem 1rem !important;
-  margin: 0 0.2rem;
+  padding: 0.6rem 1.2rem !important;
+  margin: 0 0.3rem;
   border-radius: 20px;
   transition: all var(--transition-speed) cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -139,4 +139,78 @@ footer p {
   margin-top: 1.5rem;
   font-size: 0.85rem;
   opacity: 0.6;
+}
+
+/* Scale everything down on large screens (rem-based sizes follow the root) */
+@media (min-width: 1200px) {
+  html { font-size: 93.75%; }
+}
+@media (min-width: 1600px) {
+  html { font-size: 90%; }
+}
+
+/* Navbar brand: tablet and mobile */
+.navbar-toggler {
+  flex-shrink: 0;
+}
+
+@media (hover: none) {
+  .navbar-brand:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar {
+    padding: 0.6rem 1rem !important;
+  }
+
+  .navbar > .container-fluid {
+    flex-wrap: wrap;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+
+  /* Keep the Home link clear of the hamburger button */
+  .navbar-collapse {
+    padding-top: 0.75rem;
+  }
+
+  /* Menu open: hide the brand, hamburger stays top right, links below on the left */
+  .navbar:has(.navbar-toggler[aria-expanded="true"]) .navbar-brand {
+    display: none;
+  }
+
+  .navbar-brand {
+    font-size: clamp(1rem, 5vw, 1.3rem);
+    flex: 1 1 0;
+    min-width: 0;
+    margin-right: 0.5rem;
+    white-space: normal;
+    line-height: 1.1;
+  }
+
+  .navbar-brand img {
+    height: 2rem !important;
+    margin-right: 0.5rem !important;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 359.98px) {
+  .navbar-brand {
+    font-size: 0.95rem;
+  }
+
+  .navbar-brand img {
+    height: 1.75rem !important;
+  }
 }
