@@ -55,11 +55,6 @@ main {
   transform: scale(1.03);
 }
 
-.navbar-brand:hover img {
-  transform: rotate(15deg) scale(1.1);
-}
-
-/* Nav links styling */
 .nav-link {
   font-family: 'Fredoka', sans-serif;
   font-weight: 600;
@@ -84,7 +79,6 @@ main {
   box-shadow: 0 4px 10px rgba(255, 112, 166, 0.2);
 }
 
-/* Custom Search form */
 .navbar form .form-control {
   border-radius: 20px;
   border: 2px solid #e2d9f3;
@@ -116,7 +110,6 @@ main {
   box-shadow: 0 4px 10px rgba(76, 201, 240, 0.3);
 }
 
-/* Footer layout */
 footer {
   background: linear-gradient(135deg, #2d1b4e 0%, #1a0f30 100%) !important;
   color: #d8cce2 !important;
@@ -142,7 +135,7 @@ footer p {
   font-size: 1rem;
 }
 
-footer p:last-of-type {
+.copywrite {
   margin-top: 1.5rem;
   font-size: 0.85rem;
   opacity: 0.6;

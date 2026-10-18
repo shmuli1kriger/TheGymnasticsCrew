@@ -1,0 +1,225 @@
+/* Custom Styles for Calendar Page */
+
+main {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+article {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    margin: 1.5rem auto;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: var(--card-shadow);
+    border: 4px solid #f3e8ff;
+}
+
+h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.description {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #4a3e65;
+    margin: 1rem 0 0 0;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    article {
+        padding: 2.5rem 1.5rem;
+        max-width: 95%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
+/* Calendar (built by js/calendar.js) */
+.calendar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legend {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: #4a3e65;
+}
+
+.swatch {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 4px;
+    vertical-align: -2px;
+    margin-right: 0.3rem;
+}
+
+.swatch-class { background: var(--primary-color); }
+.swatch-none { background: #fde8e8; border: 2px solid #c62828; }
+.swatch-today { border: 2px solid var(--accent-color); box-shadow: 0 0 0 2px #fff inset; }
+
+.month {
+    background: white;
+    border-radius: 24px;
+    padding: 1.5rem 1rem;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: var(--card-shadow);
+    border: 4px solid #f3e8ff;
+}
+
+.month table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+
+.month caption {
+    caption-side: top;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.month th {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    color: #5a4b76;
+    text-align: center;
+    padding-bottom: 0.3rem;
+}
+
+.month td {
+    height: 4.2rem;
+    vertical-align: top;
+    border-radius: 12px;
+    padding: 0.3rem 0.2rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: #4a3e65;
+    text-align: center;
+}
+
+.day-num { display: block; font-size: 1rem; }
+.day-label { display: block; font-size: 0.7rem; margin-top: 0.1rem; }
+
+.month td.class-day { padding: 0; }
+
+.class-day button {
+    width: 100%;
+    height: 100%;
+    min-height: 3.6rem;
+    border: 0;
+    border-radius: 12px;
+    background: var(--primary-color);
+    color: #fff;
+    font: inherit;
+    padding: 0.3rem 0.2rem;
+    cursor: pointer;
+    transition: transform var(--transition-speed) ease;
+}
+
+.class-day button:hover { transform: translateY(-2px); }
+.class-day button:focus-visible { outline: 3px solid var(--accent-color); outline-offset: 2px; }
+.class-day button:hover, .class-day button[aria-describedby] { background: var(--secondary-color); color: #3b0a24; }
+/* Every date before today is grayed out */
+.month td.past { color: #9e9e9e; background: #f2f2f2; }
+.month td.past.no-class { border-color: #c9c9c9; color: #9e9e9e; }
+.class-day.past button,
+.class-day.past button:hover,
+.class-day.past button[aria-describedby] { background: #bdbdbd; color: #fff; transform: none; }
+
+.month td.no-class {
+    background: #fde8e8;
+    border: 2px solid #c62828;
+    color: #b71c1c;
+}
+
+.month td.today { outline: 3px solid var(--accent-color); outline-offset: -3px; }
+
+.class-times {
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+    white-space: nowrap;
+    padding: 0.7rem 1rem;
+    background: #fff;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.25);
+    border-radius: 16px;
+    text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.class-times ul { list-style: none; margin: 0; padding: 0; }
+.class-times li { padding: 0.15rem 0; }
+
+.signup-link {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.7rem 1.8rem;
+    border-radius: 20px;
+    background: var(--secondary-color);
+    color: #3b0a24;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-link:hover { background: var(--primary-color); color: #fff; }
+
+@media (max-width: 768px) {
+    .month { padding: 1rem 0.5rem; max-width: 95%; }
+    .month table { border-spacing: 2px; }
+    .month caption { font-size: 1.5rem; }
+    .month td { height: 3.4rem; }
+    .day-label { font-size: 0.6rem; }
+}
