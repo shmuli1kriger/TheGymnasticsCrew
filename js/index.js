@@ -5,6 +5,7 @@ const calendarButton = document.querySelector('#calendar');
 const coachesButton = document.querySelector('#coaches');
 const galleryButton = document.querySelector('#gallery');
 const navButtons = [homeButton, performanceClassButton, signupButton, calendarButton, coachesButton, galleryButton];
+const mainElem = document.querySelector('#main');
 
 navButtons.forEach(button => {
     button.addEventListener('click', e => {
