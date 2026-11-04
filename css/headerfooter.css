@@ -24,7 +24,6 @@ main {
   flex-grow: 1;
 }
 
-/* Custom modern navbar */
 .navbar {
   background: rgba(255, 255, 255, 0.85) !important;
   backdrop-filter: blur(10px);
@@ -141,7 +140,6 @@ footer p {
   opacity: 0.6;
 }
 
-/* Scale everything down on large screens (rem-based sizes follow the root) */
 @media (min-width: 1200px) {
   html { font-size: 93.75%; }
 }
@@ -149,7 +147,6 @@ footer p {
   html { font-size: 90%; }
 }
 
-/* Navbar brand: tablet and mobile */
 .navbar-toggler {
   flex-shrink: 0;
 }
@@ -179,12 +176,10 @@ footer p {
     margin-left: auto;
   }
 
-  /* Keep the Home link clear of the hamburger button */
   .navbar-collapse {
     padding-top: 0.75rem;
   }
 
-  /* Menu open: hide the brand, hamburger stays top right, links below on the left */
   .navbar:has(.navbar-toggler[aria-expanded="true"]) .navbar-brand {
     display: none;
   }

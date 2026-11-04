@@ -41,18 +41,36 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="performanceClass.html">NEW! Performance Class</a></li>
-                        <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up For Classes!</a></li>
-                        <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="coaches.html">Meet the Coaches</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item">
+                            <!--a class="nav-link active" aria-current="page" href="index.html">Home</a-->
+                            <button class="nav-link active" id="index">Home</button>
+                        </li>
+                        <li class="nav-item">
+                            <!--a class="nav-link" href="performanceClass.html">NEW! Performance Class</a-->
+                            <button class="nav-link" id="performanceClass">Performance Class</button>
+                        </li>
+                        <li class="nav-item">
+                            <!--a class="nav-link" href="signup.html">Sign Up For Classes!</a-->
+                            <button class="nav-link" id="signup">Sign Up For Classes!</button>
+                        </li>
+                        <li class="nav-item">
+                            <!--a class="nav-link" href="calendar.html">Calendar</a-->
+                            <button class="nav-link" id="calendar">Calendar</button>
+                        </li>
+                        <li class="nav-item">
+                            <!--a class="nav-link" href="coaches.html">Meet the Coaches</a-->
+                            <button class="nav-link" id="coaches">Meet the Coaches</button>
+                        </li>
+                        <li class="nav-item">
+                            <!--a class="nav-link" href="gallery.html">Gallery</a-->
+                            <button class="nav-link" id="gallery">Gallery</button>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
+    <main id="main">
         <div id="banner" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active" aria-current="true"
@@ -169,6 +187,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script type="module" src="js/info.js"></script>
+    <script type="module" src="js/index.js"></script>
 </body>
 
 </html>

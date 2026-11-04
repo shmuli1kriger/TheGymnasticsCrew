@@ -1,7 +1,4 @@
-// Builds the class calendar from classDates, classTimes and classEndTimes (js/info.js).
-(function () {
-  if (typeof classDates === 'undefined' || !classDates.length) return;
-
+if (typeof classDates !== 'undefined' && classDates.length) {
   const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -32,7 +29,6 @@
     openButton = null;
   }
 
-  // Floats the times box right next to the date (to its left if there is no room on the right).
   function showTimes(button) {
     if (openButton === button) return;
     closeTimes();
@@ -168,4 +164,4 @@
   const comingSoon = document.querySelector('main article');
   if (comingSoon) comingSoon.style.display = 'none';
   document.querySelector('main').appendChild(wrapper);
-})();
+}
