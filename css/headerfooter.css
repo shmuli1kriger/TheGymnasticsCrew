@@ -24,8 +24,6 @@ main {
   flex-grow: 1;
 }
 
-/* Smooth cross-fade between pages (unsupported browsers just navigate normally).
-   Header and footer are named so they stay put while only the content fades. */
 @view-transition {
   navigation: auto;
 }

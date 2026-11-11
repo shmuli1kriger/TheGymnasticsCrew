@@ -74,7 +74,6 @@ main p:hover {
     background-color: rgba(243, 232, 255, 0.6);
 }
 
-/* Special styling for highlight details */
 main p:nth-of-type(4) {
     font-weight: 700;
     background-color: rgba(112, 255, 176, 0.08);

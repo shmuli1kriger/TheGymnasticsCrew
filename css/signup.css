@@ -1,4 +1,3 @@
-/* Custom Styles for Sign Up Page */
 
 main {
     background: white;
@@ -36,7 +35,7 @@ h2 {
 
 h3 {
     font-size: 1.05rem;
-    color: #b1006a; /* Fun but alerting deep pink */
+    color: #b1006a;
     font-weight: 600;
     line-height: 1.5;
     max-width: 37.5rem;
@@ -98,7 +97,6 @@ form label {
     padding-left: 0.3rem;
 }
 
-/* Make form inputs super sleek, cozy, and playful */
 .form-input {    
     background-color: #fcfaff !important;
     border: 2px solid #e2d9f3 !important;
@@ -126,7 +124,6 @@ form label {
     opacity: 0.8;
 }
 
-/* Style selected dropdown correctly */
 select.form-input {
     appearance: none;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%237b2cbf' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
@@ -135,7 +132,6 @@ select.form-input {
     background-size: 16px 12px !important;
     padding-right: 3rem !important;
 }
-/* Submit Section with bubbly button style */
 .submit {
     text-align: center;
     margin-top: 2.5rem;

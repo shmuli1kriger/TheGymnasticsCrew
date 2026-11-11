@@ -1,4 +1,3 @@
-/* Custom Styles for Calendar Page */
 
 main {
     max-width: 62.5rem;
@@ -18,8 +17,6 @@ h1 {
     margin-bottom: 3rem;
 }
 
-/* "Coming Soon" stays invisible while calendar.js builds the calendar, so it
-   doesn't flash. If the script fails or is disabled, it appears after 1.5s. */
 #coming-soon {
     visibility: hidden;
     animation: show-fallback 0s 1.5s forwards;
@@ -82,7 +79,6 @@ h2 {
     }
 }
 
-/* Calendar (built by js/calendar.js) */
 .calendar {
     width: 100%;
     display: flex;
@@ -184,7 +180,6 @@ h2 {
 .class-day button:hover { transform: translateY(-2px); }
 .class-day button:focus-visible { outline: 3px solid var(--accent-color); outline-offset: 2px; }
 .class-day button:hover, .class-day button[aria-describedby] { background: var(--accent-color); color: #3b0a24; }
-/* Every date before today is grayed out */
 .month td.past { color: #9e9e9e; background: #f2f2f2; }
 .month td.past.no-class { border-color: #c9c9c9; color: #9e9e9e; }
 .class-day.past button,
