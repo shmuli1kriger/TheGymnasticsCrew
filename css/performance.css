@@ -11,6 +11,14 @@ main {
     overflow: hidden;
 }
 
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 16px;
+}
+
 aside {
     background: linear-gradient(135deg, #ff70a6 0%, #ff4785 100%);
     color: white !important;
@@ -146,5 +154,10 @@ main p:nth-of-type(4) {
     
     main p {
         font-size: 1rem;
+    }
+
+    main img {
+        max-height: 60vh;
+        object-fit: contain;
     }
 }

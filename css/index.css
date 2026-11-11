@@ -110,8 +110,10 @@ article p {
 
 .intro #gymnastics-logo {
     width: /*13.75rem*/ 25rem;
+    max-width: 100%;
     height: auto;
-    margin-bottom: 1.5rem;
+    display: block;
+    margin: 0 auto 1.5rem auto;
     animation: floatLogo 4s ease-in-out infinite;
 }
 
