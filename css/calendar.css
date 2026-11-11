@@ -18,6 +18,22 @@ h1 {
     margin-bottom: 3rem;
 }
 
+/* "Coming Soon" stays invisible while calendar.js builds the calendar, so it
+   doesn't flash. If the script fails or is disabled, it appears after 1.5s. */
+#coming-soon {
+    visibility: hidden;
+    animation: show-fallback 0s 1.5s forwards;
+}
+
+#coming-soon.show {
+    visibility: visible;
+    animation: none;
+}
+
+@keyframes show-fallback {
+    to { visibility: visible; }
+}
+
 article {
     background: white;
     border-radius: 24px;

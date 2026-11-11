@@ -24,6 +24,31 @@ main {
   flex-grow: 1;
 }
 
+/* Smooth cross-fade between pages (unsupported browsers just navigate normally).
+   Header and footer are named so they stay put while only the content fades. */
+@view-transition {
+  navigation: auto;
+}
+
+header {
+  view-transition-name: site-header;
+}
+
+footer {
+  view-transition-name: site-footer;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
+
 .navbar {
   background: rgba(255, 255, 255, 0.85) !important;
   backdrop-filter: blur(10px);

@@ -161,7 +161,10 @@ if (typeof classDates !== 'undefined' && classDates.length) {
   });
   window.addEventListener('scroll', closeTimes, { passive: true });
 
-  const comingSoon = document.querySelector('main article');
-  if (comingSoon) comingSoon.style.display = 'none';
+  const comingSoon = document.querySelector('#coming-soon');
+  if (comingSoon) comingSoon.hidden = true;
   document.querySelector('main').appendChild(wrapper);
+} else {
+  // No class dates available: show the placeholder right away.
+  document.querySelector('#coming-soon')?.classList.add('show');
 }

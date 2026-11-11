@@ -17,13 +17,16 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 h2 {
     font-size: 1.8rem;
+    font-weight: 700;
     color: var(--primary-color);
     margin-top: 3rem;
     margin-bottom: 1rem;

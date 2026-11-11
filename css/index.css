@@ -109,7 +109,7 @@ article p {
 }
 
 .intro #gymnastics-logo {
-    width: 13.75rem;
+    width: /*13.75rem*/ 25rem;
     height: auto;
     margin-bottom: 1.5rem;
     animation: floatLogo 4s ease-in-out infinite;
@@ -127,6 +127,7 @@ article p {
     color: var(--secondary-color);
     font-size: 2rem;
     font-weight: 600;
+    margin-top: 2rem;
     margin-bottom: 1.5rem;
 }
 
