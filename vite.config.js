@@ -10,5 +10,10 @@ const pages = Object.fromEntries(
 );
 
 export default defineConfig({
-  plugins: []
+  plugins: [],
+  build: {
+    rollupOptions: {
+      input: pages
+    }
+  }
 });
