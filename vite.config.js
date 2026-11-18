@@ -11,6 +11,6 @@ const pages = Object.fromEntries(
 
 export default defineConfig({
   // GitHub Pages project site: https://shmuli1kriger.github.io/TheGymnasticsCrew/
-  base: '/',
+  plugins: [],
   build: { rollupOptions: { input: pages } },
 });
