@@ -154,7 +154,7 @@ if (typeof classDates !== 'undefined' && classDates.length) {
 
   const signup = document.createElement('a');
   signup.className = 'signup-link';
-  signup.href = 'signup.html';
+  signup.href = '/signup.html';
   signup.textContent = 'Sign Up For Classes!';
   wrapper.appendChild(signup);
 
