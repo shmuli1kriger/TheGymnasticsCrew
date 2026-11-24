@@ -186,6 +186,58 @@ footer p {
   }
 }
 
+/* Keep the menu collapsed up to 1019px (Bootstrap's lg expands at 992px). */
+@media (min-width: 992px) and (max-width: 1019.98px) {
+  .navbar-expand-lg > .container-fluid {
+    flex-wrap: wrap;
+  }
+
+  .navbar-expand-lg .navbar-toggler {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: none !important;
+    flex-basis: 100%;
+    padding-top: 0.75rem;
+  }
+
+  .navbar-expand-lg .navbar-collapse.show,
+  .navbar-expand-lg .navbar-collapse.collapsing {
+    display: block !important;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+  }
+}
+
+/* Expanded menu between 1020px and 1439px: sizes grow smoothly toward the full-size
+   navbar (which needs ~1440px). Wrapping is allowed at the narrow end. */
+@media (min-width: 1020px) and (max-width: 1439.98px) {
+  .navbar {
+    padding: 1rem 1.5rem !important;
+  }
+
+  /* 1.4rem at 1020px -> 1.9rem at 1440px */
+  .navbar-brand {
+    font-size: clamp(1.4rem, 1.45vw + 7.6px, 1.9rem);
+  }
+
+  .navbar-brand img {
+    height: 2.5rem !important;
+    margin-right: 0.75rem !important;
+  }
+
+  /* 1rem at 1020px -> 1.3rem at 1440px */
+  .nav-link {
+    font-size: clamp(1rem, 0.833vw + 7.5px, 1.3rem);
+    padding: 0.5rem 0.6rem !important;
+    margin: 0 0.15rem;
+  }
+}
+
 @media (max-width: 575.98px) {
   .navbar {
     padding: 0.6rem 1rem !important;

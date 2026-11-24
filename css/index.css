@@ -11,9 +11,9 @@ main {
     letter-spacing: .05em;
     font-family: 'Fredoka', sans-serif;
     font-weight: 600;
-    padding: 4rem 2rem;
+    padding: 0.75rem 2rem 1.5rem;
     border-radius: 24px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     max-width: 100%;
     box-shadow: var(--card-shadow);
     border: 3px solid rgba(255, 255, 255, 0.2);
@@ -42,9 +42,61 @@ main {
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.5rem;
+}
+
+/* Keep every slide the same height: the longest slide wraps to more lines on narrow screens */
+@media (max-width: 768px) {
+    .carousel-item.active,
+    .carousel-item-next,
+    .carousel-item-prev {
+        min-height: 5.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item.active,
+    .carousel-item-next,
+    .carousel-item-prev {
+        min-height: 7.5rem;
+    }
+
+    /* Narrower side padding so the long slide wraps to fewer lines */
+    #banner .carousel-item p {
+        padding: 0.25rem 1rem;
+    }
+
+    #banner .carousel-text-target {
+        padding: 0.4rem 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .carousel-item.active,
+    .carousel-item-next,
+    .carousel-item-prev {
+        min-height: 6rem;
+    }
+}
+
+@media (max-width: 319px) {
+    .carousel-item.active,
+    .carousel-item-next,
+    .carousel-item-prev {
+        min-height: 7.5rem;
+    }
+}
+
 .carousel-item p {
+    width: 100%;
     margin: 0;
-    padding: 1.5rem 2rem;
+    padding: 0.25rem 2rem;
     line-height: 1.4;
     text-shadow: 0 2px 4px rgba(0,0,0,0.15);
     text-align: center;
@@ -52,8 +104,9 @@ main {
 #signupLink, 
 .carousel-text-target {
   display: inline-block;
-  padding: 0.6rem 2rem;
-  border: 2px solid transparent; 
+  padding: 0.4rem 2rem;
+  line-height: 1.4;
+  border: 2px solid transparent;
   font-weight: 700;
 }
 #signupLink {
@@ -302,9 +355,17 @@ article p {
     article h1 {
         font-size: 2rem;
     }
-    
+    .intro-header {
+        flex-direction: column;
+    }
     .intro h1 {
         font-size: 2.2rem;
+    }
+    .intro-logo {
+        width: clamp(8rem, 16vw, 9rem);
+    }
+    .logo2 {
+        display: none;
     }
     
     .intro h2 {
@@ -318,6 +379,13 @@ article p {
     
     #banner {
         font-size: 1.1em;
-        padding: 2.5rem 1rem;
+        padding: 0.75rem 1rem 1.5rem;
+    }
+}
+
+/* Smaller banner text on small phones so the carousel can stay short (must come after the 768px #banner rule) */
+@media (max-width: 425px) {
+    #banner {
+        font-size: 0.95em;
     }
 }
